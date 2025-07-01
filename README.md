@@ -1,4 +1,3 @@
-```markdown
 # SuperDeal E-commerce Payment System
 
 ## Project Overview
@@ -33,4 +32,3 @@ A dual-system e-commerce and payment platform built on **SpringBoot**, featuring
 
 ## Development Period
 October 2024 – May 2025
-```
