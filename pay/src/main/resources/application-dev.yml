@@ -1,0 +1,31 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 7576
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+    url: jdbc:mysql://localhost:3306/mall?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+#下面这些内容是为了让MyBatis映射
+#指定Mybatis的Mapper文件
+mybatis:
+  type-aliases-package: com.imooc.pay.mybatis.entity
+  mapper-locations: classpath:mappers/*xml
+  configuration:
+    map-underscore-to-camel-case: true #可以忽略代码属性与数据表字段之间命名的冲突
+logging:
+  pattern:
+    console: "[%thread] %-5level %logger{36} - %msg%n"
+wx:
+  appId: wx3e6b9f1c5a7ff034
+  mchId: 1614433647
+  mchKey: Aa111111111122222222223333333333
+  notifyUrl: http://8.140.248.206/pay/notify
+  returnUrl: http://8.140.248.206/#/order/list
